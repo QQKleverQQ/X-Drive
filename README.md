@@ -1,3 +1,10 @@
+<p align="center">
+
+  <img src="https://github.com/QQKleverQQ/X-Drive/blob/main/banner.png?raw=true" alt="DriveX Banner" width="100%">
+
+</p>
+
+
 DriveX | Premium Car Rental Platform
 A full-stack web application for renting luxury vehicles. Built with a focus on smooth user experience, data integrity, and a clean dark-themed UI.
 
