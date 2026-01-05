@@ -8,7 +8,7 @@
 DriveX | Premium Car Rental Platform
 A full-stack web application for renting luxury vehicles. Built with a focus on smooth user experience, data integrity, and a clean dark-themed UI.
 
-🛠 Features
+# Features 
 Smart Location Sync: Seamlessly transitions city data (Vienna, NY, Moscow, Tel Aviv) across the entire booking flow using localStorage.
 
 Bulletproof Date/Time Validation:
@@ -25,7 +25,7 @@ Admin Control: A dedicated interface to manage reservations and perform a "Hard 
 
 Automated Pricing: Real-time calculation of totals based on daily rates and selected insurance/extra options.
 
-💻 Tech Stack
+# Tech Stack 
 Frontend: Vanilla JS (ES6+), HTML5, CSS3 (Custom properties, Flexbox/Grid).
 
 Backend: Java 17, Spring Boot, Spring Data JPA.
@@ -34,7 +34,7 @@ Database: MySQL.
 
 Tooling: Maven, Git.
 
-🏗 Setup & Installation
+# Setup & Installation
 Prerequisites
 JDK 17+
 
@@ -63,7 +63,7 @@ Main App: http://localhost:8080/index.html
 
 Admin Panel: http://localhost:8080/admin.html
 
-📂 Project Structure
+# Project Structure
 /src/main/java/.../ — Spring Boot controllers, repositories, and models.
 
 /src/main/resources/static/ — Frontend assets (JS, CSS, HTML).
