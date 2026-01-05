@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Booking | DriveX</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <span class="logo-main">DRIVE</span>
+      <span class="logo-accent">X</span>
+    </div>
+  </header>
+
+  <main style="max-width:1200px;margin:40px auto;padding:0 20px;color:white;">
+    <div id="booking-container">
+      <h2 id="booking-title">Loading...</h2>
+      <div id="booking-details">
+        <div style="flex:1; min-width:320px;">
+          <div style="background:#252525; padding:20px; border-radius:12px;">
+            <p id="pricePerDay" style="font-size:1.2rem; margin-bottom:12px;"></p>
+            <h3>Total: <span id="totalPrice"></span></h3>
+
+            <h3 style="margin-top:20px;">Insurance</h3>
+            <label style="display:block; margin:6px 0;">
+              <input type="radio" name="insurance" value="max" checked> Maximum deductible
+            </label>
+            <label style="display:block; margin:6px 0;">
+              <input type="radio" name="insurance" value="zero"> Zero deductible (+$21/day)
+            </label>
+
+            <h3 style="margin-top:20px;">Add-ons</h3>
+            <label style="display:block; margin:6px 0;">
+              <input type="checkbox" class="addon" value="additionalDriver"> Additional driver (+$5/day)
+            </label>
+            <label style="display:block; margin:6px 0;">
+              <input type="checkbox" class="addon" value="navigation"> Navigation (+$15/day)
+            </label>
+            <label style="display:block; margin:6px 0;">
+              <input type="checkbox" class="addon" value="tireProtection"> Tire & windshield (+$5/day)
+            </label>
+
+            <div style="margin-top:20px; text-align:center;">
+              <button id="confirmBooking" class="rent-btn" onclick="saveAndGo()">Confirm Booking</button>
+
+<script>
+function saveAndGo() {
+    const storedData = JSON.parse(localStorage.getItem('bookingData') || '{}');
+
+    const updatedData = {
+        ...storedData,
+        model: document.getElementById('booking-title').innerText,
+        total: document.getElementById('totalPrice').innerText,
+        image: document.getElementById('booking-car').src
+    };
+
+    localStorage.setItem('bookingData', JSON.stringify(updatedData));
+    window.location.href = 'offers_checkout.html';
+}
+</script>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex:1; min-width:320px; text-align:center;">
+          <img id="booking-car" src="" alt="Car" style="width:100%; max-width:500px; object-fit:contain; border-radius:12px; background:#252525; padding:12px;">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/booking.js" defer></script>
+</body>
+</html>

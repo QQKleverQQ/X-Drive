@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DriveX - Rent a Car</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    DRIVE<span class="logo-accent">X</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1 id="heroTitle">Premium car rental</h1>
+    <p id="heroSubtitle">Choose your city</p>
+    <div class="search-container">
+      <select id="city-select">
+        <option value="">Select city</option>
+        <option>New York</option>
+        <option>Tel Aviv</option>
+        <option>Moscow</option>
+        <option>Vienna</option>
+      </select>
+      <input type="date" id="pickup-date" placeholder="Pickup Date">
+      <input type="time" id="pickup-time" placeholder="Pickup Time">
+      <input type="date" id="return-date" placeholder="Return Date">
+      <input type="time" id="return-time" placeholder="Return Time">
+      <button id="search-btn">SEARCH</button>
+    </div>
+  </div>
+  <img id="heroCar" class="hero-car" src="/assets/standart.png" alt="Hero Car">
+</section>
+
+<section class="ads">
+  <div class="ad-card" data-title="Special Deals" data-desc="Save up to 20% on selected cars. Limited time offer for all customers." data-img="https://africa.visa.com/content/dam/VCOM/regional/cemea/genericafrica/paywithvisa/benefits-and-offers/exclusive-deals/sixt/sixt-800x450.jpg">
+    <img src="https://africa.visa.com/content/dam/VCOM/regional/cemea/genericafrica/paywithvisa/benefits-and-offers/exclusive-deals/sixt/sixt-800x450.jpg" alt="Ad 1">
+    <h3>Special Deals</h3>
+    <p>Save up to 20% on selected cars</p>
+  </div>
+  <div class="ad-card" data-title="Luxury Cars" data-desc="Drive a Ferrari or Lamborghini and feel the power of luxury." data-img="assets/ads2.jpg">
+    <img src="assets/ads2.jpg" alt="Ad 2">
+    <h3>Luxury Cars</h3>
+    <p>Drive a Ferrari or Lamborghini</p>
+  </div>
+  <div class="ad-card" data-title="Family Cars" data-desc="Comfortable rides for your trip with the whole family." data-img="assets/ads3.jpg">
+    <img src="assets/ads3.jpg" alt="Ad 3">
+    <h3>Family Cars</h3>
+    <p>Comfortable rides for your trip</p>
+  </div>
+</section>
+
+<div id="adModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <img id="modalImg" src="" alt="" style="width:100%; max-height:400px; object-fit:cover; margin-bottom:10px; border-radius:8px;">
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
